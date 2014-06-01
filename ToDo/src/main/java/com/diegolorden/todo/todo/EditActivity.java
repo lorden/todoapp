@@ -35,4 +35,12 @@ public class EditActivity extends ActionBarActivity {
         finish();
     }
 
+    public void removeItem(View v) {
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
+        Intent intent = new Intent();
+        intent.putExtra("item", "");
+        intent.putExtra("position", position);
+        setResult(RESULT_OK, intent);
+        finish();
+    }
 }
